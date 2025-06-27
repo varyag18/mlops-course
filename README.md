@@ -1,9 +1,7 @@
 # MLOps Course by Yandex Practicum
 
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Yandex-Practicum/mlops-course)
-![GitHub last commit](https://img.shields.io/github/last-commit/Yandex-Practicum/mlops-course)
 
 ## Осваивайте на практике инструменты и подходы MLOps для построения воспроизводимых и стабильных ML-систем.
 
