@@ -49,8 +49,5 @@ cd mlops-course/lesson-01-uv-env
 
 Разработано командой [Яндекс Практикум](https://practicum.yandex.ru) при участии специалистов из индустрии.
 
-<p align="left">
-  <a href="https://practicum.yandex.ru/" target="_blank">
-    <img src="https://avatars.githubusercontent.com/u/103542141?s=200&v=4" alt="Yandex Practicum Logo" width="120"/>
-  </a>
-</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Yandex_Practicum_logo.svg/320px-Yandex_Practicum_logo.svg.png" width="160" />
+
