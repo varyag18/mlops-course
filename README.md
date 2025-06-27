@@ -5,7 +5,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Yandex-Practicum/mlops-course)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Yandex-Practicum/mlops-course)
 
-**Осваивайте на практике инструменты и подходы MLOps для построения воспроизводимых и стабильных ML-систем.**
+## Осваивайте на практике инструменты и подходы MLOps для построения воспроизводимых и стабильных ML-систем.
 
 ## О курсе
 
@@ -48,6 +48,3 @@ cd mlops-course/lesson-01-uv-env
 ## Авторы
 
 Разработано командой [Яндекс Практикум](https://practicum.yandex.ru) при участии специалистов из индустрии.
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Yandex_Practicum_logo.svg/320px-Yandex_Practicum_logo.svg.png" width="160" />
-
