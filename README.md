@@ -21,13 +21,16 @@
 
 ### Быстрый старт
 
+Клонируйте только нужную папку с уроком с помощью sparse-checkout, не загружая весь репозиторий:
+
 ```bash
-# Клонируйте только нужную папку (с помощью sparse-checkout)
+# Клонирование одной папки через sparse-checkout (быстро и аккуратно)
 git clone --filter=blob:none --sparse https://github.com/Yandex-Practicum/mlops-course.git
 cd mlops-course
 git sparse-checkout set lesson-01-uv-env
 ```
-Альтернатива: просто клонировать весь репозиторий, если это не критично по объему:
+Если объём не критичен, можно просто клонировать весь репозиторий:
+
 ```bash
 git clone https://github.com/Yandex-Practicum/mlops-course.git
 cd mlops-course/lesson-01-uv-env
@@ -35,7 +38,7 @@ cd mlops-course/lesson-01-uv-env
 
 ### Вклад и обратная связь
 
-Вы можете создавать [Issues](https://github.com/Yandex-Practicum/mlops-course/issues) или присылать [Pull Requests](https://github.com/Yandex-Practicum/mlops-course/pulls), если находите ошибки или хотите улучшить задания. Мы ценим вклад сообщества.
+Вы можете создавать [Issues](https://github.com/Yandex-Practicum/mlops-course/issues) или присылать [Pull Requests](https://github.com/Yandex-Practicum/mlops-course/pulls), если находите ошибки или хотите улучшить задания. Мы ценим Ваш обратную связь.
 
 
 ### Лицензия
@@ -43,6 +46,6 @@ cd mlops-course/lesson-01-uv-env
 Проект распространяется под лицензией [MIT License](LICENSE).
 
 
-## Авторы
+### Авторы
 
 Разработано командой [Яндекс Практикум](https://practicum.yandex.ru) при участии специалистов из индустрии.
