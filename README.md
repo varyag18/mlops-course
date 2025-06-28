@@ -25,7 +25,6 @@
 Клонируйте только нужную папку с уроком с помощью sparse-checkout, не загружая весь репозиторий:
 
 ```bash
-# Клонирование одной папки через sparse-checkout (быстро и аккуратно)
 git clone --filter=blob:none --sparse https://github.com/Yandex-Practicum/mlops-course.git
 cd mlops-course
 git sparse-checkout set lesson-01-uv-env
