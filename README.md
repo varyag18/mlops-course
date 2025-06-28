@@ -38,7 +38,7 @@ cd mlops-course/lesson-01-uv-env
 
 ### Вклад и обратная связь
 
-Вы можете создавать [Issues](https://github.com/Yandex-Practicum/mlops-course/issues) или присылать [Pull Requests](https://github.com/Yandex-Practicum/mlops-course/pulls), если находите ошибки или хотите улучшить задания. Мы ценим Ваш обратную связь.
+Вы можете создавать [Issues](https://github.com/Yandex-Practicum/mlops-course/issues) или присылать [Pull Requests](https://github.com/Yandex-Practicum/mlops-course/pulls), если находите ошибки или хотите улучшить задания. Мы ценим вашу обратную связь!
 
 
 ### Лицензия
