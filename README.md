@@ -16,6 +16,7 @@
 ├── lesson-01-uv-env/
 ├── lesson-02-dependency-upgrade/
 ├── ...
+├── LICENSE
 └── README.md
 ```
 
