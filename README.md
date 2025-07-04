@@ -27,13 +27,13 @@
 ```bash
 git clone --filter=blob:none --sparse https://github.com/Yandex-Practicum/mlops-course.git
 cd mlops-course
-git sparse-checkout set lesson-01-uv-env
+git sparse-checkout set <lesson-folder-name>  # например: lesson-01-uv-env
 ```
 Если объём не критичен, можно просто клонировать весь репозиторий:
 
 ```bash
 git clone https://github.com/Yandex-Practicum/mlops-course.git
-cd mlops-course/lesson-01-uv-env
+cd mlops-course/lesson-01-uv-env # или другой нужный урок
 ```
 
 ### Вклад и обратная связь
