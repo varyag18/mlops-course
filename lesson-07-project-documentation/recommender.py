@@ -5,11 +5,35 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 class RecommenderModel:
+    """
+    Класс модели рекомендаций треков на основе косинусного сходства признаков.
+
+    Включает методы для обучения модели на датасетах с характеристиками треков
+    и получения рекомендаций по названию трека.
+    """
+
     def __init__(self):
+        """
+        Инициализация модели.
+
+        Атрибуты:
+            data_encoded (pd.DataFrame или None): Закодированные данные треков после обучения.
+            similarity_matrix (np.ndarray или None): Матрица косинусных сходств между треками.
+        """
         self.data_encoded = None
         self.similarity_matrix = None
 
     def fit(self, df: pd.DataFrame, df_year: pd.DataFrame):
+        """
+        Обучает модель на входных данных.
+
+        Объединяет данные с информацией о годе выпуска, кодирует жанры,
+        нормализует числовые признаки и рассчитывает матрицу сходств.
+
+        Args:
+            df (pd.DataFrame): Основной датасет с треками и признаками.
+            df_year (pd.DataFrame): Датасет с информацией о годе выпуска треков.
+        """
         df_year = df_year[["id", "year"]].copy()
         df_year["track_id"] = df_year["id"]
         df_year.drop(columns="id", inplace=True)
@@ -50,7 +74,19 @@ class RecommenderModel:
             data_encoded[numerical_features + list(xtab_song.columns[1:])]
         )
 
-    def recommend(self, track_title: str, N: int = 5):
+    def recommend(self, track_title: str, N: int = 5) -> list[dict]:
+        """
+        Генерирует рекомендации треков, похожих на заданный трек.
+
+        Args:
+            track_title (str): Название трека для поиска похожих.
+            N (int, optional): Количество рекомендуемых треков. По умолчанию 5.
+
+        Returns:
+            list of dict: Список рекомендованных треков с ключами:
+                'track_name', 'artists', 'album_name'.
+                Пустой список, если трек не найден.
+        """
         indices = pd.Series(
             self.data_encoded.index, index=self.data_encoded["track_name"]
         ).drop_duplicates()
@@ -75,6 +111,15 @@ class RecommenderModel:
 
 
 def train_and_save_model():
+    """
+    Обучает модель на подготовленных данных и сохраняет её на диск.
+
+    Загружает датасеты из CSV, обучает объект RecommenderModel и
+    сохраняет сериализованный объект в файл 'model.pkl'.
+
+    Returns:
+        None
+    """
     df = pd.read_csv("dataset.csv").drop(columns="Unnamed: 0")
     df_year = pd.read_csv("data.csv")
     model = RecommenderModel()
@@ -82,9 +127,27 @@ def train_and_save_model():
     joblib.dump(model, "model.pkl")
 
 
-def load_model():
+def load_model() -> RecommenderModel:
+    """
+    Загружает сохранённую модель рекомендаций из файла.
+
+    Returns:
+        RecommenderModel: Загруженный объект модели.
+    """
     return joblib.load("model.pkl")
 
 
-def recommend_songs(model, track_title: str, N: int = 5):
+def recommend_songs(model: RecommenderModel, track_title: str, N: int = 5) -> list[dict]:
+    """
+    Возвращает список рекомендованных треков для заданного трека.
+
+    Args:
+        model (RecommenderModel): Обученная модель рекомендаций.
+        track_title (str): Название трека, для которого нужны рекомендации.
+        N (int, optional): Количество рекомендаций. По умолчанию 5.
+
+    Returns:
+        list of dict: Список рекомендованных треков с полями
+        'track_name', 'artists', 'album_name'.
+    """
     return model.recommend(track_title, N)
