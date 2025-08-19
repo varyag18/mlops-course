@@ -10,3 +10,4 @@ class TaxiFareModel:
 
     def predict(self, X):
         return self.model.predict(X)
+# Нет новой строки в конце файла. Влияет на совместимость и читабельность
