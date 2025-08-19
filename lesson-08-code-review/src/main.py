@@ -1,3 +1,4 @@
+# Обе функции импортированы, но не используются. Плохо влияет на чистоту кода и може привести к проблемам с производительностью.
 import os
 import pandas as pd
 from src.data import load_data, split_data
@@ -19,3 +20,4 @@ model.fit(X_train, y_train)
 # Оценка
 score = model.model.score(X_test, y_test)
 print(f"R²: {score:.2f}")
+# Нет новой строки в конце файла. Влияет на совместимость и читабельность
